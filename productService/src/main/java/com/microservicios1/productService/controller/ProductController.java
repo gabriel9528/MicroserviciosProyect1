@@ -45,7 +45,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getProduct(@PathVariable("id") Long id){
+    public ResponseEntity<Product> getProduct(@PathVariable("id") Long id) {
         Product product = productService.getProduct(id);
         if(product==null){
             return ResponseEntity.noContent().build();
@@ -82,7 +82,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}/stock")
-    public ResponseEntity<Product> updateStockProduct(@PathVariable("id") Long id, @RequestParam(name="quantity", required = true) Double quantity){
+    public ResponseEntity<Product> updateStockProduct(@PathVariable("id") Long id, @RequestParam(name="quantity", required = true) Double quantity) {
         Product product = productService.updateStock(id, quantity);
         if(product==null){
             return ResponseEntity.notFound().build();
