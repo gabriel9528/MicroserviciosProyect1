@@ -5,8 +5,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/gabriel9528/MicroserviciosProyect.git
-          searchPaths: config-data
+          uri: https://github.com/gabriel9528/MicroserviciosProyect1.git
+          searchPaths: configData
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
           default-label: "main"
